@@ -1,0 +1,15 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>{{title}}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item lines="none">
+      {{body}}
+    </ion-item>
+    <ion-item lines="none">
+      <ion-button (click)="emitDeleteTodo()" slot="end">
+        <ion-icon slot="icon-only" name="trash"></ion-icon>
+      </ion-button>
+    </ion-item>    
+  </ion-card-content>
+</ion-card>
