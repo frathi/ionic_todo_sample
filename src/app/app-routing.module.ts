@@ -14,6 +14,14 @@ const routes: Routes = [
   {
     path: 'add-todo',
     loadChildren: () => import('./pages/add-todo/add-todo.module').then( m => m.AddTodoPageModule)
+  },
+  {
+    path: 'calendar',
+    loadChildren: () => import('./pages/calendar/calendar.module').then( m => m.CalendarPageModule)
+  },
+  {
+    path: 'filtered',
+    loadChildren: () => import('./pages/filtered/filtered.module').then( m => m.FilteredPageModule)
   }
 ];
 

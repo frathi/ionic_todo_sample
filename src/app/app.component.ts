@@ -17,6 +17,16 @@ export class AppComponent implements OnInit {
       title: 'ToDos',
       url: '/todos',
       icon: 'list'
+    },
+    {
+      title: 'Gefiltert',
+      url: '/filtered',
+      icon: 'list'
+    },
+    {
+      title: 'Kalender',
+      url: '/calendar',
+      icon: 'calendar'      
     }
   ];
 

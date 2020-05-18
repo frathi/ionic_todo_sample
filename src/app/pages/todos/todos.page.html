@@ -4,13 +4,17 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
+  <!-- TodoList --->
   <div *ngIf="todoService.todos && todoService.todos.length > 0">
-    <app-show-todo *ngFor="let todo of todoService.todos"
+    <!-- Eigene Component -->
+    <show-todo *ngFor="let todo of todoService.todos"
       (deleteTodo)="deleteTodo(todo.id)"
       [title]="todo.title"
       [body]="todo.body">
-    </app-show-todo>
+    </show-todo>
   </div>
+
+  <!-- Button -->
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button (click)="addTodo()">
       <ion-icon name="add"></ion-icon>

@@ -9,8 +9,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./todos.page.scss'],
 })
 export class TodosPage implements OnInit {
+
   constructor(public todoService: TodoService,
-    private router: Router) {}
+    private router: Router) {
+    }
+
+
+
 
   ngOnInit() {
   }

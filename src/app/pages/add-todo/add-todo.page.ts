@@ -25,12 +25,18 @@ export class AddTodoPage implements OnInit {
   }
 
   saveTodo() {
+    //fügt todo hinzu
     this.todoService.addTodo(this.title, this.body)
+
+    //werte reseten
     this.init()
+
+    //zurück auf die Hauptseite
     this.router.navigate(["/todos"])
   }
 
   isTodoUncomplete(): boolean {
-    return this.title === null || this.body === null || this.title.length === 0 || this.body.length === 0
+    return this.title === null || this.body === null || this.title.length === 0 || this.body.length === 0 || this.title.trim().length === 0 
+    || this.body.trim().length === 0
   }
 }

@@ -13,6 +13,22 @@ export class TodoService {
         this.init();
     }
 
+    public filterTodosForTitle(search: string) {
+        const ret: Todo[] = []
+
+        for (const todo of this.todos) {
+            if (todo.title.includes(search)) {
+                ret.push(todo)
+            }
+        }
+
+        if (ret.length === 0) {
+            return this.todos;
+        }
+
+        return ret;
+    }
+
     public async init() {
         const fromDb = await this.storage.get('todo');
         if (fromDb) {

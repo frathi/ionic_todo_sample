@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Gefilterte Todos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="stacked">Suche nach</ion-label>
+    <ion-input [(ngModel)]="searchQuery" (ionChange)="updateFilter()"></ion-input>
+  </ion-item>
+
+  <show-todo *ngFor="let item of filtered"
+      (deleteTodo)="deleteTodo(item.id)"
+      [title]="item.title"
+      [body]="item.body">
+    </show-todo>
+</ion-content>
